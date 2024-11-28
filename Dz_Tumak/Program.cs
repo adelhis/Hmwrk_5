@@ -269,7 +269,7 @@ namespace Domashka
             /*Домашнее задание 6.1 Упражнение 6.1 выполнить с помощью коллекции List<T>.*/
             Console.WriteLine("\nДомашнее задание 6.1. Заменить в упражнении 6.1. аргумент на List<T>\n");
             Console.WriteLine("\nУпражнение 6.1. Создание метода подсчета гласных и согласных букв в файле\n");
-            string target = Path.GetFullPath("Zad1.txt");
+            string target = Path.GetFullPath("Zad1.txt").Replace("bin\\Debug\\net8.0\\", "");
             int glasBukvi, soglasBukvi;
             List<char> file = File.ReadAllText(target).ToUpper().ToList();
             int others = Schet(out glasBukvi, out soglasBukvi, file);
