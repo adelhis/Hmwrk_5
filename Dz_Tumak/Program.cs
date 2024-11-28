@@ -199,7 +199,7 @@ namespace Domashka
             по массиву. Предусмотреть метод, входным параметром которого является массив символов.
             Метод вычисляет количество гласных и согласных букв.*/
             Console.WriteLine("\nУпражнение 6.1. Создание метода подсчета гласных и согласных букв в файле\n");
-            string target = Path.GetFullPath("Zad1.txt");
+            string target = Path.GetFullPath("Zad1.txt").Replace("bin\\Debug\\net8.0\\", "");
             int glasBukvi, soglasBukvi;
             char[] file = File.ReadAllText(target).ToUpper().ToCharArray();
             int others = Schet(out glasBukvi, out soglasBukvi, file);
